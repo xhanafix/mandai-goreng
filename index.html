@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nendago Mandai Goreng – Tradisi Lama, Dikunci Untuk Hari Esok</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config for Custom Premium Colors & Fonts -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slateDark: '#0b0b0d',
+            slateStone: '#1a1a1f',
+            brandGold: '#e8b04b',
+            brandRed: '#ff4d4d',
+          },
+          fontFamily: {
+            apple: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+          boxShadow: {
+            glow: '0 0 25px rgba(232,176,75,0.45)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS for extras Tailwind can't easily do -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+    /* Floating FOMO popup animation */
+    @keyframes slideUpFade {
+      0% { opacity: 0; transform: translateY(20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(20px); }
+    }
+    .fomo-pop {
+      animation: slideUpFade 8s ease-in-out forwards;
+    }
+
+    /* Video loop styling */
+    .macro-video {
+      width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+      object-fit: cover;
+    }
+
+    /* Accordion */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .accordion-item.open .accordion-content {
+      max-height: 400px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .accordion-item.open .accordion-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slateDark antialiased">
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <header class="relative bg-slateDark text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Nendago Mandai Goreng.</h1>
+        <p class="text-xl md:text-2xl text-brandGold font-medium mb-6">Tradisi lama, dikunci untuk hari esok.</p>
+        <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-8">
+          Sedia dimakan. Ikan bilis rangup. Telur yang sebati. Kepedasan yang sempurna. Dimasak dengan kepakaran tradisi dan diawet menggunakan teknologi retort ke dalam pek 100g yang tahan suhu bilik.
+        </p>
+
+        <div class="bg-slateStone rounded-2xl p-6 mb-8 border border-gray-700">
+          <p class="text-2xl font-bold text-white mb-1">RM 20 <span class="text-gray-400 line-through text-lg ml-2">RM 25</span></p>
+          <p class="text-sm text-brandRed font-semibold">*Tinggal 14 pek terakhir untuk batch hari ini</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://s.shopee.com.my/6pzEQMeqhR" class="flex-1 text-center bg-brandGold hover:bg-yellow-500 text-slateDark font-semibold py-3 px-6 rounded-full transition flex items-center justify-center gap-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/960px-Shopee.svg.png?_=20220725160704" alt="Shopee" class="w-5 h-5" />
+            Dapatkan di Shopee
+          </a>
+          <a href="https://vt.tiktok.com/ZS9rYmUJeLGC3-47oUT/" class="flex-1 text-center bg-white hover:bg-gray-100 text-slateDark font-semibold py-3 px-6 rounded-full transition">🎬 Dapatkan di TikTok Shop</a>
+        </div>
+      </div>
+
+      <!-- Hero Visual (Product Image) -->
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-800 to-black aspect-[4/5] flex items-center justify-center">
+        <img src="https://xhanafix.github.io/mandai-goreng/images/1.jpg" alt="Nendago Mandai Goreng Product" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== TRANSFORMATIONAL HOOK ===================== -->
+  <section class="bg-white py-20 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="rounded-3xl overflow-hidden shadow-lg bg-black aspect-video flex items-center justify-center">
+        <img src="https://xhanafix.github.io/mandai-goreng/images/2.jpg" alt="Nendago Mandai Goreng Served" class="w-full h-full object-cover" />
+      </div>
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Tanpa renyah. Tanpa perlu goreng semula.</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Zero saat menunggu. Mandai tradisi yang sebenar selalunya memakan masa berjam-jam untuk dihiris, dibersihkan, dan digoreng perlahan demi mendapatkan tekstur yang sempurna. Kami mengubah segalanya.
+        </p>
+        <p class="text-gray-700 text-lg leading-relaxed mt-4">
+          Dengan teknologi retort makanan yang maju, kami mengunci keaslian rasa sejurus selepas ia siap dimasak. Anda dapat menikmati keenakan hidangan warisan ini pada saat tekak menginginkannya. Hanya koyak, tuang, dan nikmati.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURE DECONSTRUCTION GRID ===================== -->
+  <section class="bg-gray-50 py-24 px-6">
+    <div class="max-w-6xl mx-auto space-y-24">
+
+      <!-- Block 1 -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">Pensterilan Retort Termaju</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>100% Tahan Suhu Bilik:</strong> Tidak perlu disimpan dalam peti sejuk. Simpan sahaja di dalam pantri, laci pejabat, atau beg travel anda selama berbulan-bulan.</span></li>
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Tanpa Bahan Pengawet:</strong> Proses retort menggunakan haba dan tekanan tinggi mengekalkan kesegaran makanan secara semula jadi tanpa mengubah rasa asli.</span></li>
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Pack Kalis Pos & Bocor:</strong> Struktur pek aluminium yang tebal dan lasak—dijamin tiada kebocoran dan tiada kekotoran sepanjang proses penghantaran.</span></li>
+          </ul>
+        </div>
+        <div class="rounded-3xl bg-white shadow-md aspect-square flex items-center justify-center text-gray-400">
+          <img src="https://xhanafix.github.io/mandai-goreng/images/3.jpg" alt="Retort Infographic" class="w-full h-full object-cover rounded-3xl" />
+        </div>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="rounded-3xl bg-white shadow-md aspect-square flex items-center justify-center text-gray-400 order-2 md:order-1">
+          <img src="https://xhanafix.github.io/mandai-goreng/images/4.jpg" alt="Cooking Sequence" class="w-full h-full object-cover rounded-3xl" />
+        </div>
+        <div class="order-1 md:order-2">
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">Dimasak Sempurna. Turutan Menentukan Rasa.</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Turutan Tradisi Sebenar:</strong> Mandai ditumis dahulu untuk mengunci rasa dasarnya, kemudian barulah dimasukkan bawang aromatik, cili padi segar, dan diakhiri dengan telur yang sebati.</span></li>
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Sedia Dimakan Segera:</strong> Sudah siap dimasak dan diperasa sepenuhnya sebelum dipaketkan. Anda tidak memerlukan kuali, dapur, mahupun minyak masak lagi.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">Tekstur Rangup Asli Ikan Bilis</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Terpilih Khas:</strong> Hanya ikan bilis premium bersaiz seragam dipilih untuk menjamin setiap suapan ada tekstur rangup yang memuaskan.</span></li>
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Kekal Rangup:</strong> Proses retort mengekalkan kerangupan tanpa perlu digoreng semula, berbeza dengan produk dalam tin biasa.</span></li>
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Serasi Mandai:</strong> Gabungan mandai lembut dan bilis rangup memberikan kontras tekstur yang membuatkan anda tambah nasi.</span></li>
+          </ul>
+        </div>
+        <div class="rounded-3xl bg-white shadow-md aspect-square flex items-center justify-center text-gray-400">
+          <img src="https://xhanafix.github.io/mandai-goreng/images/5.jpg" alt="Ikan Bilis Rangup" class="w-full h-full object-cover rounded-3xl" />
+        </div>
+      </div>
+
+      <!-- Block 4 -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="rounded-3xl bg-white shadow-md aspect-square flex items-center justify-center text-gray-400 order-2 md:order-1">
+          <img src="https://xhanafix.github.io/mandai-goreng/images/6.jpeg" alt="Kepedasan Sempurna" class="w-full h-full object-cover rounded-3xl" />
+        </div>
+        <div class="order-1 md:order-2">
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">Kepedasan Sempurna, Tidak Memedihkan</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Cili Padi Segar:</strong> Kesegaran cili padi tempatan digunakan bagi memberikan rasa pedas yang menyengat namun masih boleh dinikmati oleh seisi keluarga.</span></li>
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Resipi Diperhalusi:</strong> Tahap kepedasan diuji secara berperingkat supaya aroma rempah tetap dominan berbanding rasa hangit cili.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Block 5 -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">Pek 100g Praktikal & Kalis Bocor</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Saiz Ideal:</strong> 100g cukup untuk 2-3 orang makan bersama nasi panas, atau sebagai lauk bekal pejabat seorang diri.</span></li>
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Aluminium Tebal:</strong> Pek foil retort tebal melindungi dari cahaya dan udara, mengekalkan kualiti dalam simpanan suhu bilik.</span></li>
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Mesra Pos:</strong> Tiada risiko pecah atau bocor ketika dihantar ke seluruh Malaysia dan luar negara.</span></li>
+          </ul>
+        </div>
+        <div class="rounded-3xl bg-white shadow-md aspect-square flex items-center justify-center text-gray-400">
+          <img src="https://xhanafix.github.io/mandai-goreng/images/7.jpeg" alt="Pek 100g" class="w-full h-full object-cover rounded-3xl" />
+        </div>
+      </div>
+
+      <!-- Block 6 -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="rounded-3xl bg-white shadow-md aspect-square flex items-center justify-center text-gray-400 order-2 md:order-1">
+          <img src="https://xhanafix.github.io/mandai-goreng/images/8.jpeg" alt="Hidangan Nendago" class="w-full h-full object-cover rounded-3xl" />
+        </div>
+        <div class="order-1 md:order-2">
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">Nostalgia Rasa Kampung, Di Hujung Jari</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Warisan Diabadikan:</strong> Rasa mandai goreng makcik di kampung kini boleh dinikmati di mana sahaja anda berada.</span></li>
+            <li class="flex gap-3"><span class="text-brandGold">●</span> <span><strong>Sentiasa Sedia:</strong> Simpan dalam beg, kereta, atau laci pejabat untuk saat lapar mengejut.</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== RISK REVERSAL & TRUST ===================== -->
+  <section class="bg-white py-20 px-6 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+      <div>
+        <div class="text-4xl mb-4">🛡️</div>
+        <h4 class="font-semibold text-lg mb-2">Kesegaran Retort Dikunci</h4>
+        <p class="text-gray-600 text-sm">Teknologi pensterilan tekanan tinggi mengekalkan aroma, tekstur, dan rasa asli.</p>
+      </div>
+      <div>
+        <div class="text-4xl mb-4">🌶️</div>
+        <h4 class="font-semibold text-lg mb-2">Pedas Yang Seimbang</h4>
+        <p class="text-gray-600 text-sm">Tahap kepedasan yang diuji teliti untuk menaikkan selera nasi anda tanpa memedihkan lidah.</p>
+      </div>
+      <div>
+        <div class="text-4xl mb-4">✈️</div>
+        <h4 class="font-semibold text-lg mb-2">Sedia Untuk Travel & Pos</h4>
+        <p class="text-gray-600 text-sm">Pek ultra-durable yang sedia dibawa ke mana-mana. Sangat selamat untuk pengeposan domestik & luar negara.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING MATRIX ===================== -->
+  <section class="bg-gray-50 py-24 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+
+      <!-- Solo -->
+      <div class="bg-white rounded-3xl p-8 shadow-md border border-gray-200">
+        <h3 class="text-xl font-bold mb-2">The Solo Craving</h3>
+        <p class="text-gray-500 mb-6">1 Pek (100g) – Sesuai untuk hidangan ekspres atau mencuba keaslian rasa Nendago.</p>
+        <p class="text-3xl font-extrabold mb-1">RM 20 <span class="line-through text-gray-400 text-lg ml-2">RM 25</span></p>
+        <p class="text-brandRed text-sm mb-6">Jimat RM 5</p>
+        <div class="space-y-3">
+          <a href="https://s.shopee.com.my/6pzEQMeqhR" class="block text-center bg-[#ee4d2d] text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/960px-Shopee.svg.png?_=20220725160704" alt="Shopee" class="w-5 h-5" />
+            Shopee
+          </a>
+          <a href="https://vt.tiktok.com/ZS9rYmUJeLGC3-47oUT/" class="block text-center bg-black text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 3c.4 2.1 1.6 3.6 3.5 3.9V9c-1.3 0-2.5-.4-3.5-1v6.1c0 3-2.5 5.4-5.5 5.4S5 17.1 5 14.1 7.5 8.7 10.5 8.7c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5V3h3.5z"/></svg>
+            TikTok
+          </a>
+        </div>
+      </div>
+
+      <!-- Combo -->
+      <div class="bg-white rounded-3xl p-8 shadow-glow border-2 border-brandGold relative">
+        <span class="absolute -top-3 right-6 bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full">PILIHAN RAMAI</span>
+        <h3 class="text-xl font-bold mb-2">The Pantry Stocker (Combo 3 Pek)</h3>
+        <p class="text-gray-500 mb-6">3 Pek (300g) – Pilihan paling berbaloi untuk stok keluarga atau bekalan travel. <em>Hot Selling</em></p>
+        <p class="text-3xl font-extrabold mb-1">RM 48 <span class="line-through text-gray-400 text-lg ml-2">RM 75</span></p>
+        <p class="text-brandRed text-sm mb-6">Jimat RM 27 — Paling Untung!</p>
+        <div class="space-y-3">
+          <a href="https://s.shopee.com.my/6pzEQMeqhR" class="block text-center bg-[#ee4d2d] text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/960px-Shopee.svg.png?_=20220725160704" alt="Shopee" class="w-5 h-5" />
+            Shopee
+          </a>
+          <a href="https://vt.tiktok.com/ZS9rYmUJeLGC3-47oUT/" class="block text-center bg-black text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 3c.4 2.1 1.6 3.6 3.5 3.9V9c-1.3 0-2.5-.4-3.5-1v6.1c0 3-2.5 5.4-5.5 5.4S5 17.1 5 14.1 7.5 8.7 10.5 8.7c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5V3h3.5z"/></svg>
+            TikTok
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="bg-white py-24 px-6 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 text-center">Soalan Lazim</h2>
+
+    <div class="space-y-4">
+      <div class="accordion-item border border-gray-200 rounded-2xl px-6 cursor-pointer" onclick="this.classList.toggle('open')">
+        <div class="flex justify-between items-center py-4">
+          <h4 class="font-semibold">Apa itu pek retort? Kena simpan dalam peti ais ke?</h4>
+          <span class="accordion-icon text-2xl transition-transform">+</span>
+        </div>
+        <div class="accordion-content text-gray-600">
+          Pek retort ialah pembungkusan khas yang melalui proses pembasmian kuman dengan haba tinggi selepas diseal. Ini bermakna Mandai Goreng Nendago 100% selamat disimpan pada suhu bilik. Anda TIDAK perlu membekukannya sehinggalah pek dibuka.
+        </div>
+      </div>
+
+      <div class="accordion-item border border-gray-200 rounded-2xl px-6 cursor-pointer" onclick="this.classList.toggle('open')">
+        <div class="flex justify-between items-center py-4">
+          <h4 class="font-semibold">Kena masak atau panaskan balik sebelum makan?</h4>
+          <span class="accordion-icon text-2xl transition-transform">+</span>
+        </div>
+        <div class="accordion-content text-gray-600">
+          Tidak perlu. Ia sedia untuk dimakan terus (Ready-to-Eat). Bagaimanapun, jika anda gemarkan lauk yang panas, rendam pek foil yang belum dibuka ke dalam air panas selama 2-3 minit sebelum dihidangkan.
+        </div>
+      </div>
+
+      <div class="accordion-item border border-gray-200 rounded-2xl px-6 cursor-pointer" onclick="this.classList.toggle('open')">
+        <div class="flex justify-between items-center py-4">
+          <h4 class="font-semibold">Apakah bahan-bahan di dalamnya?</h4>
+          <span class="accordion-icon text-2xl transition-transform">+</span>
+        </div>
+        <div class="accordion-content text-gray-600">
+          Setiap pek mengandungi kulit cempedak yang disediakan teliti, ikan bilis premium, cili segar, bawang, telur, dan adunan perasa khas kami.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA FOOTER ===================== -->
+  <footer class="bg-slateDark text-white py-20 px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Kembalikan nostalgia rasa kampung halaman.</h2>
+    <p class="text-gray-300 mb-6">Nendago Mandai Goreng (100g). Rasa warisan asli. Disediakan mudah, dinikmati pantas.</p>
+    <p class="text-brandGold font-semibold mb-8">Promosi bermula dari RM 20</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+      <a href="https://s.shopee.com.my/6pzEQMeqhR" class="bg-[#ee4d2d] text-white py-3 px-6 rounded-full font-semibold flex items-center justify-center gap-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/960px-Shopee.svg.png?_=20220725160704" alt="Shopee" class="w-5 h-5" />
+        Beli Sekarang di Shopee
+      </a>
+      <a href="https://vt.tiktok.com/ZS9rYmUJeLGC3-47oUT/" class="bg-black text-white py-3 px-6 rounded-full font-semibold flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 3c.4 2.1 1.6 3.6 3.5 3.9V9c-1.3 0-2.5-.4-3.5-1v6.1c0 3-2.5 5.4-5.5 5.4S5 17.1 5 14.1 7.5 8.7 10.5 8.7c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5V3h3.5z"/></svg>
+        Beli Sekarang di TikTok
+      </a>
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING CTA BAR ===================== -->
+  <div class="fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 p-3 flex gap-3 md:hidden">
+    <a href="https://s.shopee.com.my/6pzEQMeqhR" class="flex-1 text-center bg-[#ee4d2d] text-white font-semibold py-3 rounded-full flex items-center justify-center gap-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/960px-Shopee.svg.png?_=20220725160704" alt="Shopee" class="w-5 h-5" />
+      Beli di Shopee
+    </a>
+    <a href="https://vt.tiktok.com/ZS9rYmUJeLGC3-47oUT/" class="flex-1 text-center bg-black text-white font-semibold py-3 rounded-full flex items-center justify-center gap-2">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 3c.4 2.1 1.6 3.6 3.5 3.9V9c-1.3 0-2.5-.4-3.5-1v6.1c0 3-2.5 5.4-5.5 5.4S5 17.1 5 14.1 7.5 8.7 10.5 8.7c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5V3h3.5z"/></svg>
+      Beli di TikTok
+    </a>
+  </div>
+
+  <!-- Desktop Side Floating -->
+  <div class="hidden md:flex fixed right-4 top-1/3 z-50 flex-col gap-3">
+    <a href="https://s.shopee.com.my/6pzEQMeqhR" class="bg-[#ee4d2d] text-white font-semibold py-3 px-4 rounded-full shadow-lg text-sm flex items-center justify-center gap-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/960px-Shopee.svg.png?_=20220725160704" alt="Shopee" class="w-5 h-5" />
+      Shopee
+    </a>
+    <a href="https://vt.tiktok.com/ZS9rYmUJeLGC3-47oUT/" class="bg-black text-white font-semibold py-3 px-4 rounded-full shadow-lg text-sm flex items-center justify-center gap-2">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 3c.4 2.1 1.6 3.6 3.5 3.9V9c-1.3 0-2.5-.4-3.5-1v6.1c0 3-2.5 5.4-5.5 5.4S5 17.1 5 14.1 7.5 8.7 10.5 8.7c.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5V3h3.5z"/></svg>
+      TikTok
+    </a>
+  </div>
+
+  <!-- ===================== FOMO POPUP ===================== -->
+  <div id="fomo" class="fixed bottom-20 md:bottom-6 left-4 z-50 bg-white shadow-2xl rounded-xl px-4 py-3 max-w-xs text-sm font-medium border border-gray-100"></div>
+
+  <script>
+    const fomoMessages = [
+      "🔥 Azri dari Klang beli 2 pek tadi sebentar tadi!",
+      "⚡ 1 Pek Mandai Goreng terjual ke Langkawi 40 saat lepas.",
+      "🚨 Stok promosi tinggal 9 pek sahaja untuk hari ini!",
+      "⭐ Mia dari Kota Bharu baru repeat order 3 Pek Combo!",
+      "🔥 Encik Samad dari Seremban checkout 4 pek untuk keluarga.",
+      "💡 15 orang tengah lihat produk ni sekarang.",
+      "⚡ Yusof dari Johor Bahru pos 5 pek ke Batam Indonesia.",
+      "🔥 Puan Linda dari Shah Alam beli 3 Pek Combo sebagai stok.",
+      "⭐ Haziq dari Sungai Buloh dapatkan 1 Pek untuk cuba rasa.",
+      "🚨 Harga nak naik minggu depan, beli sekarang!",
+      "🔥 7 pek terjual ke seluruh Semenanjung dalam 3 minit ni.",
+      "⚡ Cik Emma dari Penang beli 2 pek untuk potluck pejabat.",
+      "💡 Baki stok di TikTok Shop tinggal 6 pek je!",
+      "🔥 Faizal dari Kuantan baru je beli 3 Pek Combo.",
+      "⭐ Sofi dari Kuching pos 4 pek ke Miri untuk adik.",
+      "🚨 Stok terakhir di KL tinggal 4 pek sebelum cutoff.",
+      "⚡ Amir dari Putra Heights beli 5 pek untuk stok travel.",
+      "🔥 Kak Timah dari Ipoh beli 3 pek untuk mak ayah.",
+      "⭐ Daniel dari Subang repeat order ke-2 bulan ni!",
+      "💡 3 Pek Combo terjual ke Terengganu 20 saat lepas.",
+      "🔥 Nur dari Melaka dapatkan 2 pek untuk bekal sekolah.",
+      "⚡ Arif dari Cyberjaya checkout 3 Pek Combo tadi.",
+      "🚨 Tinggal 12 pek lagi sebelum promosi RM20 tamat!",
+      "🔥 Puan Rozi dari Alor Gajah beli 6 pek untuk jiran.",
+      "⭐ Ben dari Kota Kinabalu beli 4 pek untuk family day.",
+      "⚡ 1 Pek terjual ke London via pos antarabangsa tadi.",
+      "💡 Stok di Sabah tinggal 8 pek sahaja lagi.",
+      "🔥 Zeti dari Bangi beli 3 Pek Combo sebagai hadiah.",
+      "⭐ Lok dari Taiping baru sahaja beli 2 pek.",
+      "🚨 Esok harga balik semula RM25, jangan tunggu!",
+      "🔥 10 pek terjual ke Selangor dalam 6 minit lepas.",
+      "⚡ Intan dari Pasir Salak beli 3 pek untuk stok pantri.",
+      "💡 Someone from Brunei just bought 2 Pek Combo!",
+      "🔥 Hafeez dari Ampang dapatkan 4 pek untuk open house.",
+      "⭐ Cikgu Mei dari Pontian beli 5 pek untuk guru.",
+      "🚨 Shopee tinggal 7 pek je sebelum tutup promosi.",
+      "⚡ Zarul dari Kajang beli 3 Pek Combo tadi pagi.",
+      "🔥 2 pek terjual ke Kota Bharu 15 saat yang lepas.",
+      "💡 Baki stok nasional: Tinggal 18 pek sahaja.",
+      "🔥 Puan Hasnah dari Kangar pos 3 pek ke Perlis.",
+      "⭐ Joe dari Petaling Jaya repeat order 3 pek!",
+      "🚨 Stok di Sarawak makin kurang, tinggal 5 pek!",
+      "⚡ Siti dari Rembau beli 2 pek untuk makan dengan nasi ayam.",
+      "🔥 4 Pek Combo terjual ke Johor Bahru kurang minit lepas.",
+      "💡 9 orang sedang aktif dalam troli checkout sekarang.",
+      "🔥 Awin dari Selayang beli 3 pek untuk stok kecemasan.",
+      "⭐ Lily dari Cheras dapatkan 1 Pek untuk cuba pertama.",
+      "🚨 Batch esok limit 20 pek je, order sekarang!",
+      "⚡ Faiz dari Temerloh beli 4 pek untuk adik di asrama.",
+      "🔥 6 pek terjual ke seluruh negara dalam 2 minit ni.",
+      "💡 Mak Long dari Kota Damansara beli 3 Pek Combo tadi."
+    ];
+    const fomoEl = document.getElementById('fomo');
+
+    function showFomo() {
+      const randomIndex = Math.floor(Math.random() * fomoMessages.length);
+      fomoEl.classList.remove('fomo-pop');
+      void fomoEl.offsetWidth; // trigger reflow
+      fomoEl.textContent = fomoMessages[randomIndex];
+      fomoEl.classList.add('fomo-pop');
+    }
+    showFomo();
+    setInterval(showFomo, 8000);
+  </script>
+
+</body>
+</html>
